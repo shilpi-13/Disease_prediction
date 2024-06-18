@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Disease Prediction</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <h1>Disease Prediction</h1>
+        <img src="https://static.vecteezy.com/system/resources/previews/016/130/982/original/stethoscope-sign-icon-in-comic-style-doctor-medical-cartoon-illustration-on-white-isolated-background-hospital-business-concept-splash-effect-vector.jpg" alt="Healthcare Image" class="center">
+        <form action="/predict" method="post">
+            <label for="symptoms">Enter Symptoms (comma separated):</label>
+            <input type="text" id="symptoms" name="symptoms" required>
+            <button type="submit">Predict</button>
+        </form>
+    </div>
+</body>
+</html>
